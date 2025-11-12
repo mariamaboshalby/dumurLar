@@ -1,0 +1,374 @@
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    text-align: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+[dir="rtl"] body {
+    font-family: 'Cairo', 'Tajawal', Arial, sans-serif;
+    text-align: right;
+}
+
+[dir="ltr"] body {
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+}
+
+/* Navbar */
+.navbar {
+    width: 98%;
+    background-color: #F5F0CD;
+    padding: 15px 0;
+    position: fixed;
+    top: 3%;
+    z-index: 100;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-family: 'Road Rage', cursive;
+    font-weight: bolder;
+    color: #03697E;
+    margin: 0;
+}
+
+.navbar-nav {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-collapse {
+    flex-grow: 0;
+}
+
+.navbar-nav .nav-link {
+    color: #03697E;
+    font-weight: bold;
+}
+
+[dir="rtl"] .navbar-nav .nav-link {
+    margin-left: 15px;
+    margin-right: 0;
+}
+
+[dir="ltr"] .navbar-nav .nav-link {
+    margin-right: 15px;
+    margin-left: 0;
+}
+.navbar .dropdown a i{
+    color: #fff;
+}
+.navbar .dropdown li a i{
+    color: #03697E;
+}
+.navbar .dropdown{
+    background: #03697e7e;
+    margin-right: 5px;
+}
+
+[dir="rtl"] .navbar .dropdown {
+    margin-right: 5px;
+    margin-left: 0;
+}
+
+[dir="ltr"] .navbar .dropdown {
+    margin-left: 5px;
+    margin-right: 0;
+}
+
+[dir="rtl"] .navbar {
+    direction: rtl;
+}
+
+[dir="ltr"] .navbar {
+    direction: ltr;
+}
+.login-btn {
+    background-color: #03697E;
+    color: white;
+}
+
+.hero {
+    width: 100%;
+    height: 120vh;
+    background: linear-gradient(rgba(28, 148, 172, 0.6), rgba(28, 148, 172, 0.6)), url(../imgs/domor.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    border-radius: 0 0 50% 50%;
+
+}
+
+.hero h1 {
+    font-family: 'Road Rage', cursive;
+    font-size: 90px;
+    color: white;
+    font-weight: 1000;
+}
+
+[dir="rtl"] .hero h1 {
+    font-family: 'Cairo', 'Tajawal', cursive;
+}
+
+[dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] h4 {
+    font-family: 'Cairo', 'Tajawal', Arial, sans-serif;
+    font-weight: bold;
+}
+
+.hero h1 span {
+    color: #B12E2E;
+}
+
+.hero .subtitle {
+    font-size: 40px;
+}
+
+.about-section p {
+    font-size: 25px;
+    font-weight: 500;
+
+}
+
+.about-section img {
+    height: 20rem;
+
+}
+
+.about-section,
+.features-section,
+.tips-section,
+.comments-section {
+    padding: 50px 20px;
+   
+}
+
+.feature-box {
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature1 {
+    background: rgba(177, 240, 247, 0.66);
+}
+
+.feature2 {
+    background: rgba(129, 191, 218, 0.67);
+}
+
+.feature3 {
+    background: rgba(245, 240, 205, 0.67);
+
+}
+
+.feature-box i {
+    color: #4A9199;
+    margin: 5px;
+    font-size: 40px;
+}
+
+.feature-box h4 {
+    color: #03697E;
+}
+
+.feature-box p {
+    color: rgb(118, 118, 118);
+}
+
+.tips-section {
+    background: #A7D4D9;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.tips-section h2 {
+    color: white !important;
+    margin-bottom: 30px;
+}
+
+.tips-section p {
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.accor-btn {
+    background-color: #03697E;
+    color: white;
+    font-size: 20px;
+    padding: 8px 20px;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    position: relative;
+}
+
+.accor-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px 20px;
+    text-align: right;
+}
+
+[dir="rtl"] .accor-btn {
+    text-align: right;
+    flex-direction: row;
+}
+
+[dir="ltr"] .accor-btn {
+    text-align: left;
+    flex-direction: row-reverse;
+}
+
+.accor-btn i {
+    transition: transform 0.3s ease;
+}
+
+.accor-btn.active i {
+    transform: rotate(180deg);
+}
+
+[dir="ltr"] .accor-btn {
+    text-align: left;
+}
+
+[dir="ltr"] .accor-btn i {
+    order: 2;
+}
+
+.accor-btn i {
+    transition: transform 0.3s ease;
+    font-size: 16px;
+}
+
+[dir="rtl"] .accor-btn {
+    justify-content: space-between;
+}
+
+[dir="rtl"] .accor-btn span {
+    order: 1;
+}
+
+[dir="rtl"] .accor-btn i {
+    order: 2;
+}
+
+[dir="ltr"] .accor-btn span {
+    order: 2;
+}
+
+[dir="ltr"] .accor-btn i {
+    order: 1;
+}
+
+.accordion {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.accordion-item {
+    margin-bottom: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    list-style: none;
+}
+
+.accordion-collapse {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.accordion-collapse.show {
+    max-height: 500px;
+}
+
+.accordion-body {
+    background: white;
+    padding: 20px;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.accordion-body ul {
+    margin: 10px 0;
+    padding-right: 20px;
+    direction: rtl;
+}
+
+.accordion-body li {
+    margin-bottom: 8px;
+    list-style-type: disc;
+    text-align: right;
+}
+
+[dir="ltr"] .accordion-body ul {
+    padding-left: 20px;
+    padding-right: 0;
+    direction: ltr;
+}
+
+[dir="ltr"] .accordion-body li {
+    text-align: left;
+}
+
+[dir="rtl"] .accordion-body {
+    direction: rtl;
+    text-align: right;
+}
+
+[dir="ltr"] .accordion-body {
+    direction: ltr;
+    text-align: left;
+}
+
+.accordion-body ul {
+    list-style: disc;
+    padding-right: 20px;
+    margin: 0;
+}
+
+.accordion-body li {
+    margin-bottom: 8px;
+    text-align: right;
+}
+
+[dir="ltr"] .accordion-body ul {
+    padding-left: 20px;
+    padding-right: 0;
+}
+
+[dir="ltr"] .accordion-body li {
+    text-align: left;
+}
+
+.comments-section .btn{
+    width: 100px;
+    background: #03697E;
+    color: #fff;
+}

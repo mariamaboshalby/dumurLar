@@ -1,0 +1,129 @@
+body {
+    background-color: #e3f2fd !important;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.auth-container {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 420px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.auth-title {
+    color: #05515E;
+    margin-bottom: 20px;
+    font-size: 45px;
+    text-align: center;
+}
+
+.form-container {
+    width: 100%;
+}
+
+.auth-label {
+    font-weight: 600;
+    color: #3A6E85;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.auth-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.auth-btn {
+    width: 100%;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.login-btn {
+    background-color: #03697E;
+}
+
+.login-btn:hover {
+    background-color: #004d40;
+}
+
+.register-btn {
+    background-color: #28a745;
+}
+
+.register-btn:hover {
+    background-color: #218838;
+}
+
+.auth-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.auth-link a {
+    color: #00796b;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.image-container {
+    margin-top: 30px;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+}
+
+.image-container img {
+    max-width: 70%;
+    height: auto;
+    border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+    .auth-container {
+        flex-direction: row;
+        max-width: 850px;
+        gap: 25px;
+        padding: 40px;
+    }
+
+    .form-container {
+        width: 50%;
+    }
+
+    .image-container {
+        width: 50%;
+    }
+}
