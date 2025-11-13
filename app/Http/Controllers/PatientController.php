@@ -16,20 +16,19 @@ class PatientController extends Controller
         
         switch ($filter) {
             case 'ending_soon':
-                $query->where('finish_date', '<=', Carbon::now()->addDays(7))
-                      ->where('finish_date', '>=', Carbon::now());
+                $query->where('end_date', '<=', Carbon::now()->addDays(7))
+                      ->where('end_date', '>=', Carbon::now());
                 break;
             case 'active':
-                $query->where('finish_date', '>', Carbon::now())
-                      ->where('status', 'active');
+                $query->where('end_date', '>', Carbon::now());
                 break;
             case 'all':
                 // عرض جميع المرضى النشطين والذين لم تنته مدتهم
-                $query->where('finish_date', '>=', Carbon::now());
+                $query->where('end_date', '>=', Carbon::now());
                 break;
         }
         
-        $patients = $query->orderBy('finish_date', 'asc')->get();
+        $patients = $query->orderBy('end_date', 'asc')->get();
         
         return view('patients.index', compact('patients', 'filter'));
     }

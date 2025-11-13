@@ -22,7 +22,7 @@ class AuthController extends Controller
         ]);
 
         if (Auth::attempt($request->only('email', 'password'))) {
-            return redirect()->intended('/dashboard');
+            return redirect()->intended('/patients');
         }
 
         return back()->withErrors(['email' => 'بيانات الدخول غير صحيحة']);
@@ -51,7 +51,7 @@ class AuthController extends Controller
 
         Auth::attempt($request->only('email', 'password'));
 
-        return redirect('/dashboard');
+        return redirect('/patients');
     }
 
     public function logout()

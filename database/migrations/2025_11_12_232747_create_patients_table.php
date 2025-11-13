@@ -6,33 +6,34 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('patients', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('patient_name');
+            $table->string('national_id')->unique();
             $table->integer('age');
-            $table->string('phone');
-            $table->text('address');
-            $table->string('hospital_name');
-            $table->string('doctor_name');
-            $table->string('bank_account');
+            $table->string('hospital');
+            $table->string('doctor');
+            $table->string('account_number');
             $table->date('start_date');
-            $table->date('finish_date');
-            $table->string('patient_photo')->nullable();
-            $table->decimal('target_amount', 10, 2)->default(0);
-            $table->decimal('collected_amount', 10, 2)->default(0);
-            $table->enum('status', ['active', 'completed', 'expired'])->default('active');
+            $table->date('end_date');
+
+            // ملفات مطلوبة كلها
+            $table->json('birth_certificate');
+            $table->json('patient_photo');
+            $table->json('father_id');
+            $table->json('mother_id');
+            $table->json('x_ray');
+            $table->json('dexa');
+            $table->json('mri');
+            $table->json('ct_scan');
+            $table->json('blood_test');
+
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('patients');
