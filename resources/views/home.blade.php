@@ -97,7 +97,8 @@
         <form method="POST" action="{{ route('comments.store') }}" class="col-md-6 bg-light p-4 rounded shadow">
             @csrf
             <div class="mb-3">
-                <textarea name="msg" id="comment" class="form-control" placeholder="{{ __('messages.comments') }}"
+                <input type="text" name="name" class="form-control mb-3" placeholder="{{ __('messages.name') }}" required>
+                <textarea name="comment" id="comment" class="form-control" placeholder="{{ __('messages.comments') }}"
                     cols="30" rows="6" required></textarea>
             </div>
 

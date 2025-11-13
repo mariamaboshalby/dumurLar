@@ -5,6 +5,14 @@
 @section('content')
 <link rel="stylesheet" href="{{ asset('css/auth.css') }}">
 
+<div class="floating-circles">
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+    <div class="circle circle4"></div>
+    <div class="circle circle5"></div>
+</div>
+
 <div class="auth-container">
     <div class="form-container">
         <h2 class="auth-title">{{ __('messages.register') }}</h2>
@@ -19,6 +27,8 @@
             <input type="text" name="name" class="auth-input" value="{{ old('name') }}" required>
             <label class="auth-label">{{ __('messages.email') }}</label>
             <input type="email" name="email" class="auth-input" placeholder="example@gmail.com" value="{{ old('email') }}" required>
+            <label class="auth-label">{{ __('messages.phone') }}</label>
+            <input type="tel" name="phone" class="auth-input" placeholder="01234567890" value="{{ old('phone') }}" required>
             <label class="auth-label">{{ __('messages.password') }}</label>
             <input type="password" name="password" class="auth-input" required>
             <label class="auth-label">{{ __('messages.confirm_password') }}</label>

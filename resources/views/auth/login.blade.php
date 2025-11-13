@@ -5,6 +5,14 @@
 @section('content')
 <link rel="stylesheet" href="{{ asset('css/auth.css') }}">
 
+<div class="floating-circles">
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+    <div class="circle circle4"></div>
+    <div class="circle circle5"></div>
+</div>
+
 <div class="auth-container">
     <div class="form-container">
         <h2 class="auth-title">{{ __('messages.login') }}</h2>

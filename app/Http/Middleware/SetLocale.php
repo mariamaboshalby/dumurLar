@@ -11,8 +11,16 @@ class SetLocale
 {
     public function handle(Request $request, Closure $next)
     {
-        $locale = Session::get('locale', config('app.locale'));
-        App::setLocale($locale);
+        // أولاً جرب قراءة اللغة من الجلسة، ثم من الكوكيز، وأخيراً اللغة الافتراضية
+        $locale = Session::get('locale') 
+                 ?? $request->cookie('locale') 
+                 ?? config('app.locale');
+        
+        // تأكد أن اللغة مدعومة
+        if (in_array($locale, ['en', 'ar'])) {
+            App::setLocale($locale);
+            Session::put('locale', $locale);
+        }
         
         return $next($request);
     }
