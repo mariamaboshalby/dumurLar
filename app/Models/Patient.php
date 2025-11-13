@@ -8,26 +8,33 @@ use Carbon\Carbon;
 class Patient extends Model
 {
     protected $fillable = [
-        'name', 'age', 'phone', 'address', 'hospital_name', 'doctor_name',
-        'bank_account', 'start_date', 'finish_date', 'patient_photo',
-        'target_amount', 'collected_amount', 'status'
+        'patient_name', 'age', 'national_id', 'hospital', 'doctor',
+        'account_number', 'start_date', 'end_date', 'birth_certificate',
+        'patient_photo', 'father_id', 'mother_id', 'x_ray', 'dexa', 'mri', 'ct_scan', 'blood_test'
     ];
 
     protected $casts = [
         'start_date' => 'date',
-        'finish_date' => 'date',
-        'target_amount' => 'decimal:2',
-        'collected_amount' => 'decimal:2'
+        'end_date' => 'date',
+        'birth_certificate' => 'array',
+        'patient_photo' => 'array',
+        'father_id' => 'array',
+        'mother_id' => 'array',
+        'x_ray' => 'array',
+        'dexa' => 'array',
+        'mri' => 'array',
+        'ct_scan' => 'array',
+        'blood_test' => 'array'
     ];
 
     public function getDaysRemainingAttribute()
     {
-        return Carbon::now()->diffInDays($this->finish_date, false);
+        return Carbon::now()->diffInDays($this->end_date, false);
     }
 
     public function getProgressPercentageAttribute()
     {
-        if ($this->target_amount == 0) return 0;
-        return min(100, ($this->collected_amount / $this->target_amount) * 100);
+        // مؤقتاً - سنضيف هذه الحقول لاحقاً
+        return rand(30, 90);
     }
 }
