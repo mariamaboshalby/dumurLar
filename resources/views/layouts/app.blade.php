@@ -33,6 +33,8 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Simple Animations -->
+    <script src="{{ asset('js/simple-animations.js') }}"></script>
 </body>
 
 </html>

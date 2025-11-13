@@ -11,6 +11,7 @@ return [
     'no_account' => 'Don\'t have an account?',
     'register' => 'Register',
     'name' => 'Name',
+    'phone' => 'Phone Number',
     'confirm_password' => 'Confirm Password',
     'have_account' => 'Already have an account?',
         'login_title' => 'Login',
